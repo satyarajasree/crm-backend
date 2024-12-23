@@ -48,12 +48,6 @@ public class CrmController {
     @Autowired
     private JwtService jwtService;
 
-    @Autowired
-    private AmazonS3 amazonS3;
-
-    @Value("${aws.s3.bucket-name}")
-    private String bucketName; // S3 Bucket Name
-
     private final Map<String, String> otpStorage = new HashMap<>();
     private final Map<String, LocalDateTime> otpTimestamp = new HashMap<>();
 
